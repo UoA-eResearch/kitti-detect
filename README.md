@@ -17,6 +17,8 @@ conda install -c conda-forge pycocotools
 conda install numpy matplotlib pillow jupyter scikit-image
 ```
 
+Note pycocotools is not required for the kitti_check.ipynb workflow.
+
 Then start a Jupyter Notebook session and run kitti_detect.ipynb
 
 ## Data Generation
