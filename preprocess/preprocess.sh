@@ -10,6 +10,7 @@ bash relabel.sh "${1}"
 bash rename.sh "${1}"
 bash rotate.sh "${1}"
 bash resize.sh "${1}"
+bash newlines.sh "${1}"
 bash classes.sh "${1}"
 
 

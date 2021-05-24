@@ -16,15 +16,18 @@ for f in glob(os.path.join(input_image_dir, "*")):
         exif = image._getexif()
         rotated = False
 
-        if exif[orientation] == 3:
-            image = image.rotate(180, expand=True)
-            rotated = True
-        elif exif[orientation] == 6:
-            image = image.rotate(270, expand=True)
-            rotated = True
-        elif exif[orientation] == 8:
-            image = image.rotate(90, expand=True)
-            rotated = True
+        if exif:
+            if exif[orientation] == 3:
+                image = image.rotate(180, expand=True)
+                rotated = True
+            elif exif[orientation] == 6:
+                image = image.rotate(270, expand=True)
+                rotated = True
+            elif exif[orientation] == 8:
+                image = image.rotate(90, expand=True)
+                rotated = True
+        else:
+            print(f"EXIF data unavailable for {f}")
 
         if rotated:
             image.save(f)
