@@ -13,7 +13,7 @@ def parse_kitti(path, label_overrides=None):
             label, _, _, _, xmin, ymin, xmax, ymax, *_ = line.split()
             if label_overrides and name in label_overrides:
                 label = label_overrides[name]
-            objects.append({'label': label, 'bounds': [int(x) for x in [xmin, ymin, xmax, ymax]]})
+            objects.append({'label': label, 'bounds': [int(float(x)) for x in [xmin, ymin, xmax, ymax]]})
     return objects
 
 def class_summary(paths, label_dir, label_overrides):
