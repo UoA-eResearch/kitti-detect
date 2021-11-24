@@ -40,7 +40,7 @@ def main():
     # experiment name corresponds to the foldername and file prefix for data partitions and label maps
     exp_name = "t1-final"
     batch_size = 16
-    epochs = 100
+    epochs = 30
     use_label_overrides = True
     train_path = f"{exp_name}/{exp_name}-part-0.json"
     test_path = f"{exp_name}/{exp_name}-test.json"
@@ -92,7 +92,7 @@ def main():
     # save logs
     log_name = f"{exp_name}/{exp_name}-model-logs.json"
     with open(log_name, 'w') as f:
-        json.dump(logs, f)    
+        json.dump(logs, f)
 
     # save the model
     model_path = f"{exp_name}/{exp_name}-model.pt"

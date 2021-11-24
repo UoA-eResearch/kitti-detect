@@ -100,6 +100,7 @@ def evaluate(model, data_loader, device):
 
     # gather the stats from all processes
     metric_logger.synchronize_between_processes()
+
     print("Averaged stats:", metric_logger)
     coco_evaluator.synchronize_between_processes()
 
