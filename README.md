@@ -34,3 +34,8 @@ Then start a Jupyter Notebook session and run kitti_check.ipynb
 ## Data Generation
 
 Use https://github.com/UoA-eResearch/annotate-to-KITTI or similar to generate KITTI training data with images and labels in separate folders.
+
+## Preprocessing and Training
+
+Images and labels are preprocessed via scripts in the `preprocess` directory which will combine various image directories and resize the images
+The training data and test data is generated via the `data-preparation` notebook. For a single training fold, use `train.py` to train a model, for multiple training folds use `train-cv.py`.
