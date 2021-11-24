@@ -37,5 +37,5 @@ Use https://github.com/UoA-eResearch/annotate-to-KITTI or similar to generate KI
 
 ## Preprocessing and Training
 
-Images and labels are preprocessed via scripts in the `preprocess` directory which will combine various image directories and resize the images
+Images and labels are preprocessed via scripts in the `preprocess` directory which will combine various image directories and resize the images. Use the `preprocess.sh` script as an entry point.
 The training data and test data is generated via the `data-preparation` notebook. For a single training fold, use `train.py` to train a model, for multiple training folds use `train-cv.py`.
